@@ -1,0 +1,43 @@
+{
+  "name": "yremotedesktopclient",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack",
+    "build:dev": "cross-env NODE_ENV=\"development\" webpack",
+    "deploy": "npm run build && scp ./assets/app.bundle.js sv2:/var/www/remote.aikaserver.jp/assets/app.bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/styles": "^4.11.4",
+    "@sentry/react": "^6.7.2",
+    "@sentry/tracing": "^6.7.2",
+    "buffer": "^6.0.3",
+    "debug": "^4.3.1",
+    "mime": "^2.5.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "ts-ebml": "^2.0.2"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@types/node": "^15.12.4",
+    "@types/react": "^17.0.11",
+    "@types/react-dom": "^17.0.8",
+    "cross-env": "^7.0.3",
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.4",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "glob-parent": "^6.0.0"
+  }
+}
